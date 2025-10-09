@@ -1,0 +1,22 @@
+.info{
+    background-color: blue;
+}
+.intro{
+    background-color: chocolate;
+    padding: 2px;
+    border-collapse: collapse;
+    border-color: black;
+}
+
+#highlight{
+    background-color: blueviolet;
+    padding: 5px;
+}
+
+h1,h2,h3{
+    background-color: pink;
+    text-align: center;
+   font-style: italic;
+   margin: 5px;
+   border-color: black;
+}
