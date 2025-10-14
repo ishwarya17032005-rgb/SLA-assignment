@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Padding and Border Styles</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 120px;
+      margin: 20px;
+      background-color: lightgray;
+    }
+
+    /* Different padding values */
+    .padding-small {
+      padding: 5px;
+      border: 3px solid blue;
+    }
+
+    .padding-medium {
+      padding: 20px;
+      border: 3px dashed green;
+    }
+
+    .padding-large {
+      padding: 40px;
+      border: 3px double red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Small Padding (5px) — Solid Border</h2>
+  <div class="box padding-small">
+    Content moves slightly inward.
+  </div>
+
+  <h2>Medium Padding (20px) — Dashed Border</h2>
+  <div class="box padding-medium">
+    Content moves further inward.
+  </div>
+
+  <h2>Large Padding (40px) — Double Border</h2>
+  <div class="box padding-large">
+    Content is pushed much further inside.
+  </div>
+
+</body>
+</html>

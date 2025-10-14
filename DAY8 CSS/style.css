@@ -1,0 +1,24 @@
+h1 {
+    padding: 0%;
+    margin: 0%;
+}
+
+h1 {
+    background-color: hotpink;
+    text-align: center;
+}
+
+p {
+    background-color: lavender;
+    font-style: initial;
+    padding: 0%;
+    margin: 0%;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+}
+#highlights{
+    background-color: blueviolet;
+    text-emphasis-color: unset;
+}
