@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive CSS Demo</title>
+  <style>
+    /* 1️⃣ Base styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: lightblue;   /* default background */
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* 2️⃣ Background color changes at breakpoints */
+    @media (min-width: 600px) {
+      body {
+        background-color: lightgreen;
+      }
+    }
+
+    @media (min-width: 900px) {
+      body {
+        background-color: lightcoral;
+      }
+    }
+
+    /* 3️⃣ Two-column layout */
+    .columns {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .column {
+      flex: 1;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* On mobile (below 600px), become single column */
+    @media (max-width: 599px) {
+      .columns {
+        flex-direction: column;
+      }
+    }
+
+    /* 4️⃣ em vs rem text sizing */
+    .text-demo {
+      margin: 2rem;
+    }
+
+    .text-demo p {
+      background: #fff;
+      padding: 1em;
+      margin: 1em 0;
+      border-left: 5px solid #4facfe;
+    }
+
+    .text-demo .em-text {
+      font-size: 1.5em; /* relative to parent’s font-size */
+    }
+
+    .text-demo .rem-text {
+      font-size: 1.5rem; /* relative to root font-size */
+    }
+
+    /* 5️⃣ Full-screen section using vh and vw */
+    .fullscreen {
+      height: 100vh;          /* full viewport height */
+      width: 100vw;           /* full viewport width */
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    /* 6️⃣ Flexbox with min-width queries */
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      background: #fff;
+    }
+
+    .flex-item {
+      flex: 1;
+      padding: 1rem;
+      background: #ffe6e6;
+      text-align: center;
+      border-radius: 6px;
+    }
+
+    /* Switch to horizontal when screen >= 700px */
+    @media (min-width: 700px) {
+      .flex-container {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive CSS Practice Page</h1>
+    <p>Resize the browser to see effects!</p>
+  </header>
+
+  <!-- Two-column layout -->
+  <section class="columns">
+    <div class="column">
+      <h2>Column 1</h2>
+      <p>This is the first column. On small screens, it stacks vertically.</p>
+    </div>
+    <div class="column">
+      <h2>Column 2</h2>
+      <p>This is the second column. On larger screens, both appear side by side.</p>
+    </div>
+  </section>
+
+  <!-- em vs rem example -->
+  <section class="text-demo">
+    <h2>Text Size Comparison</h2>
+    <div style="font-size: 16px;">
+      <p class="em-text">This text uses <b>1.5em</b> — relative to parent (16px × 1.5 = 24px).</p>
+    </div>
+    <div style="font-size: 10px;">
+      <p class="em-text">This text also uses <b>1.5em</b> — but parent is 10px (10 × 1.5 = 15px).</p>
+    </div>
+    <div>
+      <p class="rem-text">This text uses <b>1.5rem</b> — always based on root (usually 16px × 1.5 = 24px).</p>
+    </div>
+  </section>
+
+  <!-- Fullscreen layout -->
+  <section class="fullscreen">
+    <div>Full-Screen Section using vh & vw</div>
+  </section>
+
+  <!-- Flexbox with direction switch -->
+  <section class="flex-container">
+    <div class="flex-item">Flex Item 1</div>
+    <div class="flex-item">Flex Item 2</div>
+    <div class="flex-item">Flex Item 3</div>
+  </section>
+
+</body>
+</html>
+

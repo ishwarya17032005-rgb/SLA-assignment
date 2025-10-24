@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Portfolio</title>
+  <style>
+    /* 🎨 Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* 🌈 Hero Section using vh/vw */
+    .hero {
+      height: 100vh; /* full viewport height */
+      width: 100vw;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem; /* relative for responsiveness */
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-top: 1rem;
+    }
+
+    /* 🧭 Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #333;
+      color: white;
+      padding: 1rem 2rem;
+      flex-wrap: wrap; /* allows wrapping when small */
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00f2fe;
+    }
+
+    /* 📱 Vertical navbar on small screens */
+    @media (max-width: 700px) {
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-top: 1rem;
+      }
+    }
+
+    /* 💼 Portfolio/Product Grid */
+    .portfolio {
+      padding: 3rem 2rem;
+      background: #f9f9f9;
+    }
+
+    .portfolio h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 columns default */
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* 🧱 Grid responsive layout */
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr; /* 1 column */
+      }
+    }
+
+    /* 🧾 About Section */
+    .about {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    /* 👣 Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* 📏 Responsive text scaling */
+    @media (max-width: 900px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🧭 Navbar -->
+  <nav>
+    <div class="logo">MyPortfolio</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🌈 Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>I'm a passionate web developer creating responsive, modern, and user-friendly websites.</p>
+  </section>
+
+  <!-- 💼 Portfolio Grid -->
+  <section class="portfolio">
+    <h2>My Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>Responsive design using Flexbox and Grid.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>Dynamic web app built with React.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Project 3">
+        <h3>Project 3</h3>
+        <p>Portfolio page using CSS animations.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Project 4">
+        <h3>Project 4</h3>
+        <p>API integration and data visualization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧾 About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a frontend developer with a strong focus on responsive and user-friendly web interfaces. 
+      I enjoy transforming creative ideas into interactive digital experiences using HTML, CSS, and JavaScript.
+    </p>
+  </section>
+
+  <!-- 👣 Footer -->
+  <footer>
+    © 2025 MyPortfolio | Designed with ❤️ by You
+  </footer>
+
+</body>
+</html>

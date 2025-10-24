@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Card Hover</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: 250px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+      margin: 1rem;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px 0;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0 0 10px 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Hover effect */
+    .card:hover {
+      transform: translateY(-10px) scale(1.05); /* lift and enlarge */
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);   /* deeper shadow */
+    }
+
+    /* Container for multiple cards */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/250x150" alt="Project 1">
+      <h3>Project 1</h3>
+      <p>Interactive UI with animations.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/250x150" alt="Project 2">
+      <h3>Project 2</h3>
+      <p>Responsive design & hover effects.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/250x150" alt="Project 3">
+      <h3>Project 3</h3>
+      <p>Portfolio showcase example.</p>
+    </div>
+  </div>
+
+</body>
+</html>

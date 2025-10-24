@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Animation</title>
+  <style>
+    .moving-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      position: relative; /* needed for left positioning */
+      animation: moveRight 4s linear infinite alternate; /* animation applied */
+      margin: 50px;
+    }
+
+    /* Define keyframes for left-to-right movement */
+    @keyframes moveRight {
+      0% { left: 0; }
+      100% { left: 300px; } /* move 300px to the right */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="moving-text">I’m moving from left to right! 🚀</div>
+
+</body>
+</html>
