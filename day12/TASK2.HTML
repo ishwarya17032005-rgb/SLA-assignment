@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float and Clearfix Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Float image */
+    .float-img {
+      float: left;               /* Makes image float to the left */
+      margin-right: 15px;        /* Adds space between image and text */
+      border-radius: 8px;
+      width: 200px;
+      height: auto;
+    }
+
+    /* Clearfix to fix container collapse */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container clearfix">
+    <h2>Floating Image Beside Text</h2>
+    <img src="https://via.placeholder.com/200" alt="Sample Image" class="float-img">
+    <p>
+      This is an example of floating an image beside text using CSS. 
+      The image is floated to the left, and the text wraps nicely around it. 
+      Without a clearfix, the parent container might collapse because floated elements are taken out of the normal document flow.
+    </p>
+    <p>
+      The clearfix technique ensures that the container correctly wraps around both the floated and non-floated elements. 
+      This method is commonly used in layouts like blogs, news articles, or profile cards.
+    </p>
+  </div>
+
+</body>
+</html>

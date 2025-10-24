@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Property Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 30px;
+    }
+
+    .box {
+      background-color: lightcoral;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 6px;
+    }
+
+    /* 1. Block */
+    .block .box {
+      display: block;
+      width: 150px;
+    }
+
+    /* 2. Inline */
+    .inline .box {
+      display: inline;
+      width: 150px; /* ignored */
+    }
+
+    /* 3. Inline-block */
+    .inline-block .box {
+      display: inline-block;
+      width: 150px;
+    }
+
+    /* 4. None */
+    .none .box {
+      display: none; /* Hidden from page */
+    }
+
+    /* 5. Flex */
+    .flex {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* 6. Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .container {
+      margin-bottom: 30px;
+      padding: 10px;
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Experiment with CSS Display Values</h1>
+
+  <div class="container block">
+    <h2>Display: Block</h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <div class="container inline">
+    <h2>Display: Inline</h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <div class="container inline-block">
+    <h2>Display: Inline-block</h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <div class="container none">
+    <h2>Display: None</h2>
+    <div class="box">Box 1 (Hidden)</div>
+    <div class="box">Box 2 (Hidden)</div>
+  </div>
+
+  <div class="container flex">
+    <h2>Display: Flex</h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>

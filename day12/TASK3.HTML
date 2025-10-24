@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-Box Flexbox Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* Flex container */
+    .flex-container {
+      display: flex;                  /* enables Flexbox */
+      justify-content: space-around;  /* spaces boxes evenly */
+      align-items: center;            /* vertically centers them */
+      flex-wrap: wrap;                /* allows wrapping on smaller screens */
+      gap: 20px;                      /* adds spacing between boxes */
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Each box */
+    .box {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      padding: 40px;
+      flex: 1;                        /* each box takes equal space */
+      min-width: 200px;               /* prevents shrinking too small */
+      text-align: center;
+      border-radius: 10px;
+      font-size: 1.2em;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);    /* hover lift effect */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>3-Box Flexbox Layout</h1>
+
+  <div class="flex-container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+</body>
+</html>
